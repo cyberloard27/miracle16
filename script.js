@@ -1,5 +1,23 @@
 const cards = document.querySelectorAll(".memory-card");
 const loveNoteSection = document.querySelector(".love-note-section");
+
+if (window.Lenis) {
+  const lenis = new window.Lenis({
+    duration: 1.35,
+    smoothWheel: true,
+    wheelMultiplier: 0.8,
+    touchMultiplier: 0.95,
+    infinite: false,
+  });
+
+  const raf = (time) => {
+    lenis.raf(time);
+    window.requestAnimationFrame(raf);
+  };
+
+  window.requestAnimationFrame(raf);
+}
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
