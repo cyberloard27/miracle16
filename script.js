@@ -3,10 +3,10 @@ const loveNoteSection = document.querySelector(".love-note-section");
 
 if (window.Lenis) {
   const lenis = new window.Lenis({
-    duration: 1.35,
+    duration: 1,
     smoothWheel: true,
-    wheelMultiplier: 0.8,
-    touchMultiplier: 0.95,
+    wheelMultiplier: 1,
+    touchMultiplier: 1,
     infinite: false,
   });
 
